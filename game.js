@@ -1,9 +1,11 @@
-var randomNumbers = Math.floor(Math.random() * 9);
-document.write(randomNumbers);
-if (randomNumbers < 5) {
-    alert('ตัวเลขมีค่าน้อยกว่า 5');
-} else if (randomNumbers == 5) {
-    alert('ตัวเลขมีค่าเท่ากับ 5');
+var randomNumbers = Math.floor(Math.random() * 100);
+var input = prompt('ใส่เลขของคุณสิตั้งแต่ 0-100')
+if (parseInt(input) === randomNumbers) {
+    alert('เก่งมาก! คุณทายถูก' + ' ตัวเลขคือ' + randomNumbers);
+} else if (parseInt(input) < randomNumbers) {
+    alert('ผิด! ตัวเลขที่คุณใส่มามีค่าน้อยเกินไป จริงๆแล้วมันคือ ' + randomNumbers + ' ตะหาก');
+} else if (parseInt(input) > randomNumbers) {
+    alert('ผิด! ตัวเลขที่คุณใส่มามีค่ามากเกินไป จริงๆแล้วมันคือ ' + randomNumbers + ' ตะหาก');
 } else {
-    alert('ตัวเลขมีค่ามากกว่า 5');
+    alert('ค่าที่เรารับมาเกิดการผิดพลาด กรุณารีเฟรชและใส่ค่าให้เราใหม่');
 }
